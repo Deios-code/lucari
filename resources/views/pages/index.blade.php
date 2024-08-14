@@ -7,33 +7,277 @@
         </div>
         @include('pages.main.slider')
     </header>
-    <section>
-        <div class="container cards-valores grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:py-5 md:py-10">
-            <div class="border-4 text-center rounded-xl sm:p-5 md:p-10 md:py-20 flex flex-col items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                </svg>
-               <p class="text-2xl mt-2"><b>Rumbo A La Escuela</b></p>
+    <section class="cont-numeros">
+        <div class="container cards-valores">
+            <div class="flex flex-col border-r-2 px-4 card-valor">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd" />
+                        <path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                    </svg>
+                    <p>8500</p>
+                </div>
+               <p class="">Personas <b>Beneficiadas</b></p>
             </div>
-            <div class="border-4 text-center rounded-xl sm:p-5 md:p-10 md:py-14 flex flex-col items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                </svg>
-                <p class="text-2xl mt-2"><b>Servir por Mesa para todos</b></p>
+            <div class="flex flex-col border-r-2 px-4 card-valor">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                    </svg>
+                    <p>1418</p>
+                </div>
+                <p class="">Millones de pesos en <b>Donaciones</b></p>
             </div>
-            <div class="border-4 text-center rounded-xl sm:p-5 md:p-10 md:py-14 flex flex-col items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                </svg>
-               <p class="text-2xl mt-2"><b>Programa Escalar</b></p>
+            <div class="flex flex-col border-r-2 px-4 card-valor">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                        <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                        <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                      </svg>
+
+                    <p>627</p>
+                </div>
+               <p class="">Millones de pesos invertidos en <b>Educación</b></p>
             </div>
-            <div class="border-4 text-center rounded-xl sm:p-5 md:p-10 md:py-14 flex flex-col items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sm:w-16">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-               <p class="text-2xl mt-2"><b>Techos De Amor</b></p>
+            <div class="flex flex-col px-4 card-valor">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                        <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                    </svg>
+                    <p>319</p>
+                </div>
+               <p class="">Millones de pesos en <b>Auxilios de Vivienda</b></p>
             </div>
 
         </div>
     </section>
+    <section class="nuestro-impacto">
+        <div class="container sm:px-5 md:px-10" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/cont-1.jpg') no-repeat;background-size: cover;background-position: center;background-attachment: fixed;">
+            <div class="titulo-seccion">
+                <h5>NUESTRO IMPACTO</h5>
+            </div>
+            <div class=" flex  max-[537px]:flex-col max-[537px]:text-center items-center justify-between txt-seccion">
+                <p><span class="text-alternative font-bold">Haz parte del cambio.</span> Tu donación es la llave que abre puertas a un futuro más brillante para quienes más lo necesitan.</p>
+                <a href="" class="btn btn-primary-dark flex items-center max-[537px]:mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
+                        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                    </svg>
+                    <span>¡Quiero donar!</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="sobre-nosotros relative">
+        <div class="img-flot-1 absolute">
+            <img src="{{ asset('img/utils/bar-primary.svg') }}" alt="">
+        </div>
+        <div class="container py-10 md:py-20 grid md:grid-cols-2 gap-4 items-center">
+            <div class="gallery grid grid-cols-2 gap-4">
+                <div class="grid gap-4">
+                    <div>
+                        <br>
+                        <br>
+                    </div>
+                    <img class="rounded-lg" src="{{ asset('img/about/img1.jpg') }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ asset('img/about/img2.jpg') }}" alt="img_site_lucari">
+                </div>
+                <div class="grid gap-4">
+                    <img class="rounded-lg" src="{{ asset('img/about/img3.jpg') }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ asset('img/about/img4.png') }}" alt="img_site_lucari">
+                    <br>
+                </div>
+            </div>
+            <div class="txt-nosotros">
+                <div class="img-flot-2 absolute hidden md:block">
+                    <img src="{{ asset('img/utils/flot2.svg') }}" alt="">
+                </div>
+                <div class="img-flot-3 absolute hidden md:block">
+                    <img src="{{ asset('img/utils/flot3.svg') }}" alt="">
+                </div>
+                <h4 class="text-primary border-l-4">Transformando Vidas desde 2014</h4>
+                <p>Desde nuestro inicio en 2014, nos hemos comprometido a transformar la vida de las comunidades más vulnerables. Con el apoyo de la Familia Aristizábal Zuluaga y la colaboración de Soberana SAS, <span class="font-bold">trabajamos cada día para ser el impulso que estas familias necesitan para crear un mañana mejor.</span></p>
+                <div class="flex items-center mt-4">
+                    <a href="" class="btn btn-primary">
+                        <span>Conoce más sobre nosotros</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nuestros-valores relative">
+        <div class="container flex flex-col">
+
+            <div class="img-flot-4 absolute">
+                <img src="{{ asset('img/utils/flot4.svg') }}" alt="">
+            </div>
+            <div class="titulo-seccion">
+                <h5>Nuestros Valores</h5>
+            </div>
+            <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl">
+                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
+                    <h4>Solidaridad</h4>
+                    <p>Creemos en el bien común y en <span class="font-bold">ayudarnos unos a otros.</span></p>
+                </div>
+                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
+                    <h4>Compromiso</h4>
+                    <p>Estamos totalmente <span class="font-bold">dedicados a nuestra misión</span> y luchamos por alcanzar nuestros objetivos compartidos.</p>
+                </div>
+                <div class="card px-4">
+                    <h4>Calidad Humana</h4>
+                    <p><span class="font-bold">Nos esforzamos por dejar una huella positiva</span> en cada persona, en cada momento y en cada lugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cont-flotante relative">
+        <div class="img-flot-5 absolute hidden md:block">
+            <img src="{{ asset('img/utils/flot5.svg') }}" alt="">
+        </div>
+        <div class="img-flot-6 absolute hidden min-[556px]:block">
+            <img src="{{ asset('img/utils/flot2.svg') }}" alt="">
+        </div>
+    </div>
+    <section class="nuestros-programas">
+        <div class="py-4 min-[1131px]:py-20 container text-center">
+            <div class="txt-titulo-programas">
+                <h3>Alineados con los Objetivos de Desarrollo Sostenible (ODS)</h3>
+                <p>Nuestras acciones están alineadas con los ODS, especialmente en la lucha contra la pobreza (ODS 1) y el hambre (ODS 2). <span class="font-bold">Trabajamos para construir un país más justo y equitativo, donde todos tengan la oportunidad de prosperar.</span></p>
+            </div>
+            <div class="titulo-seccion">
+                <h4>Nuestros Valores</h4>
+            </div>
+            <div class="cont-programas grid min-[768px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6">
+                <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img1.png') no-repeat;background-size: cover;">
+                    <div class="txt-card">
+                        <h4>Techos de <span>Amor</span></h4>
+                        <p><span class="font-bold">Línea Estratégica:</span> Vivienda, ODS 1</p>
+                    </div>
+                    <div class="hover-card flex items-center">
+                        <p>Mejoramos las condiciones de vivienda de familias en situación de pobreza extrema, <span class="font-bold">ofreciendo subsidios para que puedan adquirir, construir o renovar hogares dignos.</span></p>
+                    </div>
+                </div>
+                <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img2.png') no-repeat;background-size: cover;">
+                    <div class="txt-card">
+                        <h4>Programa <span>Escalar</span></h4>
+                        <p><span class="font-bold">Línea Estratégica:</span> Educación, ODS 1</p>
+                    </div>
+                    <div class="hover-card flex items-center">
+                        <p>Brindamos becas y subsidios para que jóvenes de comunidades vulnerables <span class="font-bold">puedan acceder a educación superior</span>, rompiendo el ciclo de la pobreza y transformando sus vidas.</p>
+                    </div>
+                </div>
+                <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img3.png') no-repeat;background-size: cover;">
+                    <div class="txt-card">
+                        <h4>Techos de <span>Amor</span></h4>
+                        <p><span class="font-bold">Línea Estratégica:</span> Educación y Alimentación, ODS 1 y 2</p>
+                    </div>
+                    <div class="hover-card flex items-center">
+                        <p>Mejoramos integralmente escuelas rurales, proporcionando alimentación, infraestructura, insumos escolares y formación artística para los estudiantes. Además, <span class="font-bold">trabajamos con el SENA para formar a los padres y mejorar sus oportunidades laborales.</span></p>
+                    </div>
+                </div>
+                <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img4.png') no-repeat;background-size: cover;">
+                    <div class="txt-card">
+                        <h4>Nutrimos <span>Corazones</span></h4>
+                        <p><span class="font-bold">Línea Estratégica:</span> Alimentación, ODS 2</p>
+                    </div>
+                    <div class="hover-card flex items-center">
+                        <p>En colaboración con otras entidades, distribuimos alimentos a comunidades vulnerables en todo el país, <span class="font-bold">luchando contra la inseguridad alimentaria y garantizando el acceso a alimentos nutritivos.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video-historia bg-white">
+        <div class="container py-10">
+            <div class="flex flex-col">
+                <h3 class="my-0 mb-10 mx-auto text-center w-fit">Conéctate con las historias de cambio que hemos Hecho Posibles</h3>
+                <div class="video z-10">
+                    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/kClhLhDdbjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cont-flotante relative z-0">
+        <div class="img-flot-7 absolute -left-48 -top-24">
+            <img src="{{ asset('img/utils/flot4.svg') }}" alt="">
+        </div>
+    </div>
+    <section class="nuestras-noticias py-10">
+        <div class="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white card z-10 rounded-lg border-2">
+                <img src="{{ asset('img/news/img1.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
+                <div class="txt-card p-6">
+                    <h5 class="border-b-4 w-fi ">ALIANZAS</h5>
+                    <p class="my-4">Descubre más sobre nuestras alianzas en pro de los niños más necesitados de nuestro país</p>
+                    <div class="flex justify-end">
+                        <a href="" class="flex items-center hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                            </svg>
+                            Leer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white card z-10 rounded-lg border-2">
+                <img src="{{ asset('img/news/img2.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
+                <div class="txt-card p-6">
+                    <h5 class="border-b-4 w-fit mb-4">ENTREGA DE LA CONSTRUCCIÓN DE 4 BIBLIOTECAS</h5>
+                    <div class="flex justify-end">
+                        <a href="" class="flex items-center hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                            </svg>
+                            Leer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white card z-10 rounded-lg border-2">
+                <img src="{{ asset('img/news/img3.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
+                <div class="txt-card p-6 flex flex-col justify-between">
+                    <h5 class="border-b-4 w-fit mb-4">FUNDACIÓN LUCARI ENTREGÓ 2 NUEVOS SUBSIDIOS DE VIVIENDA</h5>
+                    <div class="flex justify-end">
+                        <a href="" class="flex items-center hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                            </svg>
+                            Leer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white card z-10 rounded-lg border-2">
+                <img src="{{ asset('img/news/img4.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
+                <div class="txt-card p-6">
+                    <h5 class="border-b-4 w-fit ">3 HOGARES QUE SE RENUEVAN EN CERETÉ</h5>
+                    <p class="my-4">3 Familias que ahora tienen mejor calidad de vida.</p>
+                    <div class="flex justify-end">
+                        <a href="" class="flex items-center hover:underline">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                            </svg>
+                            Leer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nuestros-aliados bg-white pt-10 pb-0 min-[1131px]:py-10">
+        <div class="container">
+            <h3 class="text-center border-b-4 w-fit my-0 mx-auto pb-2">Descubre las alianzas que potencian nuestro impacto.</h3>
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <img src="{{ asset('img/allies/img1.png') }}" alt="">
+                    <img src="{{ asset('img/allies/img2.png') }}" alt="">
+                    <img src="{{ asset('img/allies/img3.png') }}" alt="">
+                    <img src="{{ asset('img/allies/img4.png') }}" alt="">
+                    <img src="{{ asset('img/allies/img5.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    @include('layouts.footer')
 </x-app-layout>

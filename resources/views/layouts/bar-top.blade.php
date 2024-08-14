@@ -1,4 +1,4 @@
-<div class="bg-dark p-2">
+<div class="bg-dark p-2 hidden lg:block">
     <div class="container text-white flex items-center ">
         <a href="tel:+57(4)4443918" class="mr-4 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-1">

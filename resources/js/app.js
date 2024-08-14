@@ -1,6 +1,7 @@
 import './bootstrap';
-import { Carousel } from 'flowbite';
+import { Carousel,Dial } from 'flowbite';
 
+console.log(Dial);
 
 if(document.getElementById("slider")){
     const fila=document.querySelector('.cont-slider')
