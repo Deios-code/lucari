@@ -92,7 +92,6 @@ p{
     cursor: pointer;
     transition: all 0.3s;
 }
-
 .btn-primary-dark{
     background-color: var(--color-dark-primary);
 }
@@ -117,6 +116,11 @@ p{
     padding: 10px 20px!important;
 }
 .btn-transparent-secondary:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-light)!important;
+}
+
+.btn-transparent-secondary.btn-active{
     background-color: var(--color-secondary);
     color: var(--color-light)!important;
 }
@@ -804,4 +808,31 @@ header.site-stories h3 span{
     color: var(--color-primary);
     border-bottom: var(--color-dark-secondary) solid 4px;
     width: fit-content;
+}
+.site-reports .info-tab a svg{
+    fill: var(--color-primary);
+}
+.site-reports .info-tab a:hover{
+    background-color: #E5E5E5;
+}
+
+/* site-contact */
+.site-contact h4{
+    color: var(--color-primary);
+    border-bottom: var(--color-light-secondary) solid 4px;
+    width: fit-content;
+}
+.site-contact .cont-icon svg{
+    /* background-color: var(--color-primary); */
+    /* border-radius: 50%; */
+    stroke: var(--color-dark-primary);
+    width: 30px;
+    /* padding: 10px; */
+    margin-right: 20px;
+}
+.site-contact .cont-redes a svg{
+    padding: 5px;
+    width: 40px;
+    fill: var(--color-primary);
+    margin-right: 20px;
 }

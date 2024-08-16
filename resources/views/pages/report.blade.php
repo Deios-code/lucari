@@ -9,344 +9,103 @@
             <div class="pt-4 mb-4 border-b border-gray-200 dark:border-gray-700">
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="desarrollo-tab" data-tabs-target="#desarrollo" type="button" role="tab" aria-controls="desarrollo" aria-selected="false">Desarrollo Historico</button>
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="informes-tab" data-tabs-target="#informes" type="button" role="tab" aria-controls="informes" aria-selected="false">Informes de gestión</button>
                     </li>
                     <li class="me-2" role="presentation">
-                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="informes-tab" data-tabs-target="#informes" type="button" role="tab" aria-controls="informes" aria-selected="false">Informes de Gestión</button>
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="indicadores-tab" data-tabs-target="#indicadores" type="button" role="tab" aria-controls="indicadores" aria-selected="false">Indicadores de Medición</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="desarrollo-tab" data-tabs-target="#desarrollo" type="button" role="tab" aria-controls="desarrollo" aria-selected="false">Desarrollo Historico</button>
                     </li>
                 </ul>
             </div>
-            <div id="default-tab-content">
-                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="desarrollo" role="tabpanel" aria-labelledby="desarrollo-tab">
-                    <div class="titulo pb-10">
-                        <h4>Desarrollo Histórico</h5>
+            <div id="default-tab-content" class="info-tab">
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="informes" role="tabpanel" aria-labelledby="informes-tab">
+                    <div class="titulo pb-4">
+                        <h4>Informes de Gestión</h5>
                     </div>
-                    <div id="accordion-collapse" data-accordion="collapse">
-                        <h5 id="accordion-collapse-heading-1">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-                                <span>Actividades 2016</span>
-                                {{-- <div class="flex items-center"> --}}
-                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                                    </svg>
-                                {{-- </div> --}}
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-1" class="hidden bg-white" aria-labelledby="accordion-collapse-heading-1">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                        <thead class="  uppercase bg-gray-50 font-normal border">
-                                            <tr>
-                                                <th scope="col" class="px-6 py-3">Tipo de Donación</th>
-                                                <th scope="col" class="px-6 py-3">Entidad</th>
-                                                <th scope="col" class="px-6 py-3">Cantidad</th>
-                                                <th scope="col" class="px-6 py-3">Zona/Región</th>
-                                                <th scope="col" class="px-6 py-3">Programa</th>
-                                                <th scope="col" class="px-6 py-3">Línea estratégica</th>
-                                                <th scope="col" class="px-6 py-3">ODS</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="border">
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Bicicletas</th>
-                                                <th class="font-normal">Escuela Rural José Ignacio Botero</th>
-                                                <th class="font-normal">116</th>
-                                                <th class="font-normal">Santuario/ Antioquia</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Calzado Escolar</th>
-                                                <th class="font-normal">Escuela Rural José Ignacio Botero</th>
-                                                <th class="font-normal">154</th>
-                                                <th class="font-normal">Santuario/ Antioquia</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Zapatos Escolares</th>
-                                                <th class="font-normal">Centro educativo Caicemapa</th>
-                                                <th class="font-normal">139</th>
-                                                <th class="font-normal">Fonseca/Guajira</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Pupitres</th>
-                                                <th class="font-normal">Centro educativo Caicemapa</th>
-                                                <th class="font-normal">100</th>
-                                                <th class="font-normal">Fonseca/Guajira</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Zapatos Escolares</th>
-                                                <th class="font-normal">Institución Educativa Santa Teresa</th>
-                                                <th class="font-normal">147</th>
-                                                <th class="font-normal">Cereté/Córdoba</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Pupitres</th>
-                                                <th class="font-normal">Institución Educativa Santa Teresa</th>
-                                                <th class="font-normal">120</th>
-                                                <th class="font-normal">Cereté/Córdoba</th>
-                                                <th class="font-normal">Rumbo a la Escuela</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Auxilio Compra de Vivienda</th>
-                                                <th class="font-normal">Empleados escasos recursos Soberana</th>
-                                                <th class="font-normal">3</th>
-                                                <th class="font-normal">Medellín y Bogotá</th>
-                                                <th class="font-normal">Techos de Amor</th>
-                                                <th class="font-normal">Vivienda</th>
-                                                <th class="font-normal">ODS 4</th>
-                                            </tr>
-
-                                            <tr class="border-b">
-                                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Becas Escolares</th>
-                                                <th class="font-normal">Hijos familias vulnerables Soberana</th>
-                                                <th class="font-normal">3</th>
-                                                <th class="font-normal">Medellín y Barranquilla</th>
-                                                <th class="font-normal">Escalar</th>
-                                                <th class="font-normal">Educación</th>
-                                                <th class="font-normal"></th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2017</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                    <div class="flex flex-col">
+                        <a href="{{ asset('docs/Informe-Gestion-2015.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2015
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                        <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                            <thead class="  uppercase bg-gray-50 font-normal border">
-                                                <tr>
-                                                    <th scope="col" class="px-6 py-3">Tipo de Donación</th>
-                                                    <th scope="col" class="px-6 py-3">Entidad</th>
-                                                    <th scope="col" class="px-6 py-3">Cantidad</th>
-                                                    <th scope="col" class="px-6 py-3">Zona/Región</th>
-                                                    <th scope="col" class="px-6 py-3">Programa</th>
-                                                    <th scope="col" class="px-6 py-3">Línea estratégica</th>
-                                                    <th scope="col" class="px-6 py-3">ODS</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Entrega Sala Informática</td>
-                                                    <th class="font-normal">Centro educativo Caicemapa</th>
-                                                    <th class="font-normal">90</th>
-                                                    <th class="font-normal">Fonseca/Guajira</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Remodelación Escuela</td>
-                                                    <th class="font-normal">Centro educativo Caicemapa</th>
-                                                    <th class="font-normal">90</th>
-                                                    <th class="font-normal">Fonseca/Guajira</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Entrega Uniformes escolares/Calzado escolar</td>
-                                                    <th class="font-normal">Escuela Retiro de los Indios Buenavista</th>
-                                                    <th class="font-normal">90</th>
-                                                    <th class="font-normal">Cereté/Córdoba</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Construcción baños</td>
-                                                    <th class="font-normal">Escuela Retiro de los Indios Buenavista</th>
-                                                    <th class="font-normal">90</th>
-                                                    <th class="font-normal">Cereté/Córdoba</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Construcción Aula escolar</td>
-                                                    <th class="font-normal">Escuela San Antonio el Playón</th>
-                                                    <th class="font-normal">80</th>
-                                                    <th class="font-normal">Cereté/Córdoba</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Entrega Uniformes escolares</td>
-                                                    <th class="font-normal">Escuela San Antonio el Playón</th>
-                                                    <th class="font-normal">80</th>
-                                                    <th class="font-normal">Cereté/Córdoba</th>
-                                                    <th class="font-normal">Rumbo a la Escuela</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal">ODS 4</th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Auxilio compra Vivienda</td>
-                                                    <th class="font-normal">Empleados escasos recursos Soberana</th>
-                                                    <th class="font-normal">3</th>
-                                                    <th class="font-normal">Valledupar, Medellín y Apartado</th>
-                                                    <th class="font-normal"></th>
-                                                    <th class="font-normal"></th>
-                                                    <th class="font-normal"></th>
-                                                </tr>
-                                                <tr class="border-b">
-                                                    <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap ">Becas Escolares</td>
-                                                    <th class="font-normal">Hijos familias vulnerables Soberana</th>
-                                                    <th class="font-normal">11</th>
-                                                    <th class="font-normal">Medellín y Barranquilla</th>
-                                                    <th class="font-normal">Escalar</th>
-                                                    <th class="font-normal">Educación</th>
-                                                    <th class="font-normal"></th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2018</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+
+                        </a>
+                        <a href="{{ asset('docs/Informe-Gestion-2016.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2016
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2019</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+
+                        </a>
+                        <a href="{{ asset('docs/Informe-Gestion-2017.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2017
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2020</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+
+                        </a>
+                        <a href="{{ asset('docs/Informe-Gestion-2018.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2018
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2021</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+
+                        </a>
+                        <a href="{{ asset('docs/Informe-Gestion-2019.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2019
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2022</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+
+                        </a>
+                        <a href="{{ asset('docs/Informe-Gestion-2022.pdf') }}" target="_blank" class="p-4 bg-white flex items-center justify-between w-9/12">
+                            Informe anual de gestión 2022
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="ml-10 w-6">
+                                <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5Zm6.61 10.936a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                             </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <h5 id="accordion-collapse-heading-2">
-                            <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                                <span>Actividades 2023</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-                            </svg>
-                            </button>
-                        </h5>
-                        <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                            <div class="p-5 border border-b-0 border-gray-200">
-                                <div class="relative overflow-x-auto">
-                                    <span>Inversión: $ 119.383.339</span>
-                                    <h1>texto</h1>
-                                    {{-- <table class="w-full text-left rtl:text-right font-normal mt-10">
-                                    </table> --}}
-                                </div>
-                            </div>
-                        </div>
+
+                        </a>
                     </div>
                 </div>
-                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="informes" role="tabpanel" aria-labelledby="informes-tab">
+                <div class="hidden p-4 rounded-lg text-justify bg-gray-50 dark:bg-gray-800" id="indicadores" role="tabpanel" aria-labelledby="indicadores-tab">
+                    <div class="titulo pb-4">
+                        <h4>Indicadores de Medición</h5>
+                    </div>
+                    <p class="my-5">Alineados con el foco social de la estrategia de Sostenibilidad de Soberana, donde el objetivo es que cuidamos nuestra tripulación y nuestra región y el objetivo de gestión es desarrollar programas que generen progreso en las comunidades vulnerables. (Convenios con instituciones, generación de empleo, investigación y desarrollo, etc.), se definen los siguientes indicadores de medición, orientados a los ODS con lo que buscamos contribuir</p>
+                    <div class="mb-4">
+                        <p class="font-bold mb-4">ODS 1 Fin de la Pobreza:</p>
+                        <ul class="list-disc list-inside">
+                            <li>% de la población que vive por debajo del umbral de la pobreza</li>
+                            <li>Definir un umbral de pobreza adecuado para el contexto y utilizar datos de ingresos o consumo para calcular el porcentaje de la población que se encuentra por debajo de ese umbral.</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <p class="font-bold mb-4">ODS 2 Hambre Cero:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Número de personas con inseguridad alimentaria</li>
+                            <p>Medir el número absoluto de personas que no tienen acceso suficiente a alimentos nutritivos y seguros. Esto implica evaluar la cantidad de personas que experimentan inseguridad alimentaria en las regiones intervenidas</p>
+                            <li>Acceso alimentos nutritivos</li>
+                            <p>Evaluar el acceso de la población a alimentos nutritivos y seguros. Se puede hacer a través de encuestas y datos sobre la disponibilidad de alimentos</p>
+                        </ul>
+                    </div>
+                    <p class="font-bold mb-4">Organigrama Fundación</p>
+                    <img src="{{ asset('img/organigrama.png') }}" alt="Organigrama Fundación" class="h-80">
 
+
+
+
+
+                </div>
+                <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="desarrollo" role="tabpanel" aria-labelledby="desarrollo-tab">
+                    @include('pages.report.tabDesarrolloHistorico')
                 </div>
             </div>
     </section>

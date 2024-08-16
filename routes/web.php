@@ -38,6 +38,10 @@ route::get('/informes-gestion', function () {
     return view('pages/report');
 })->name('informes-gestion');
 
+route::get('/contacto', function () {
+    return view('pages/contact');
+})->name('contacto');
+
 // Route::get('home', AboutController::class)->name('home');
 // Route::get('nosotros', AboutController::class)->name('nosotros');
 // Route::get('nuestros-programas', AboutController::class)->name('nuestros-programas');

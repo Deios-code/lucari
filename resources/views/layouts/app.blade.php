@@ -8,6 +8,10 @@
         <title>{{ config('app.name', 'Fundación Lucari') }}</title>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @if (request()->routeIs('contacto'))
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        @endif
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Gurajada&family=Hind+Guntur:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,4 +28,7 @@
         </div>
     </body>
 </html>
+@if (request()->routeIs('contacto'))
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+@endif
 @stack('scripts')

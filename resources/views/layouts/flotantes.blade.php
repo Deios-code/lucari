@@ -1,7 +1,7 @@
 
 
-<div data-dial-init class="cont-flotante fixed bottom-6 right-6 group z-50">
-    <div id="speed-dial-menu-dropdown" class="z-50 flex flex-col justify-end mb-4 space-y-2 bg-primary  border-2 rounded-full shadow-sm">
+<div data-dial-init class="cont-flotante fixed bottom-6 right-6 group"  style="z-index: 1500">
+    <div id="speed-dial-menu-dropdown" class="relative flex flex-col justify-end mb-4 space-y-2 bg-primary  border-2 rounded-full shadow-sm" style="z-index: 1500">
         <ul class="text-sm text-white flex items-center flex-col py-2">
             <li>
                 <a href="#">
