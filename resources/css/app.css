@@ -6,6 +6,7 @@
     --color-dark: #000000;
     --color-light: #ffffff;
     --color-gray: #E5E5E5;
+    --color-primary-transparent: rgba(5, 126, 63, 0.95);
     --color-primary: #057E3F;
     --color-secondary: #E6D100;
     --color-alternative: #262626;
@@ -37,6 +38,19 @@ body{
 .text-secondary{
     color: var(--color-secondary);
 }
+.bg-primary-transparent{
+    background-color: var(--color-primary-transparent);
+}
+.bg-primary{
+    background-color: var(--color-primary);
+}
+.bg-primary-alternative{
+    background-color: var(--color-primary-alternative);
+}
+.bg-secondary{
+    background-color: var(--color-secondary);
+}
+
 h1{
     font-size:  53.75px;
     font-weight: 800;
@@ -127,15 +141,6 @@ p{
 
 .bg-dark{
     background-color: var(--color-dark);
-}
-.bg-primary{
-    background-color: var(--color-primary);
-}
-.bg-primary-alternative{
-    background-color: var(--color-primary-alternative);
-}
-.bg-secondary{
-    background-color: var(--color-secondary);
 }
 .cont-navigation-main{
     background-color: rgba(5, 126, 63, 0.8);

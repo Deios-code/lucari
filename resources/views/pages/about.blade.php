@@ -51,7 +51,7 @@
         </div>
     </section>
     <section class="about">
-        <div class="container grid grid-cols-2 gap-4 bg-white">
+        <div class="container grid lg:grid-cols-2 gap-4 bg-white">
             <div class="p-10 " style="background-color: #F3F4F6;">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -61,7 +61,7 @@
                 </div>
                 <p>Somos una organización sin ánimo de lucro con un propósito claro: <span class="font-bold">transformar la vida de las personas más necesitadas a través de programas enfocados en educación, alimentación y vivienda.</span> Trabajamos mano a mano con Soberana SAS y otras entidades para crear proyectos que realmente cambian vidas.</p>
             </div>
-            <div class="p-10 " style="background-color: #F3F4F6;">
+            <div class="p-10" style="background-color: #F3F4F6;">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
@@ -77,7 +77,7 @@
             <div class="img-flot-4 absolute">
                 <img src="{{ asset('img/utils/flot4.svg') }}" alt="">
             </div>
-            <div class="titulo-seccion">
+            <div class="titulo-seccion z-50">
                 <h5>Nuestros Valores</h5>
             </div>
             <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl">

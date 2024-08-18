@@ -1,7 +1,9 @@
 import './bootstrap';
 import { Carousel,Dial } from 'flowbite';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-console.log(Dial);
+AOS.init();
 
 if(document.getElementById("slider")){
     const fila=document.querySelector('.cont-slider')
@@ -20,4 +22,28 @@ if(document.getElementById("slider")){
             e.target.classList.add('activo');
         });
     }
+}
+
+if(document.getElementById("animatedNumberOne")){
+    function animateNumber(elementId, start, end, duration) {
+        let current = start;
+        const range = end - start;
+        const increment = end > start ? 1 : -1;
+        const stepTime = Math.abs(Math.floor(duration / range));
+        const obj = document.getElementById(elementId);
+
+        const timer = setInterval(function() {
+            current += increment;
+            obj.textContent = current;
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Llama a la función para animar el número
+    animateNumber('animatedNumberOne', 8000, 8500, 5000);
+    animateNumber('animatedNumberTwo', 1000, 1418, 7000);
+    animateNumber('animatedNumberThree', 600, 627, 7000);
+    animateNumber('animatedNumberFour', 300, 319, 7000);
 }

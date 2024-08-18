@@ -1,12 +1,12 @@
 <x-app-layout>
     <header class="site-stories relative">
         <div class="min-h-60 bg-contain md:bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: linear-gradient(rgba(5, 126, 63, 0.8),rgba(5, 126, 63, 0.8)),url('/img/bg-stories.jpg')">
-                <h3 class="text-center text-white">Contáctanos</h3>
+                {{-- <h3 class="text-center text-white">Contáctanos</h3> --}}
         </div>
     </header>
-    <section class="site-contact py-10">
-        <div class="container bg-white p-10 rounded-lg">
-            <div class="grid grid-cols-2 gap-4">
+    <section class="site-contact py-10 -mt-40 relative z-20">
+        <div class="container bg-white p-5 lg:p-10 rounded-lg">
+            <div class="grid md:grid-cols-2 gap-4">
                 <div>
                     <h4 class="mb-4">Información de contacto</h4>
                     <p>Puedes escribirnos a través del formulario a continuación o enviarnos un correo directamente</p>
@@ -86,7 +86,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="border-l-2 p-10 py-0">
+                <div class="border-t-2 md:border-t-0 md:border-l-2 p-5 md:p-10 md:py-0">
                     <h4 class="mb-4">Contáctanos</h4>
                     <form action="" method="post" class="">
                         <small>Los campos con * son obligatorios</small>
@@ -116,7 +116,9 @@
 
         {{-- 'lat' => 6.18948809194407, 'long' => -75.60169958088075 --}}
     </section>
-    <div id="map" style="height: 300px"></div>
+    <section class="bg-white pt-20">
+        <div id="map" class="container" style="height: 300px"></div>
+    </section>
     @include('layouts.footer')
     @push('scripts')
         <script>

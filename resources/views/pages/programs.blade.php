@@ -14,7 +14,7 @@
                     <span class="font-bold"> trabajamos incansablemente para construir un país más justo y equitativo, donde todos tengan la oportunidad de prosperar.</span>
                 Con el respaldo de nuestro principal aliado y benefactor, la Empresa Soberana SAS, nuestra misión se enmarca en esta ruta de trabajo para generar un impacto real y duradero en las comunidades más vulnerables.</p>
             </div>
-            <div class="cont-cards grid grid-cols-3 gap-10">
+            <div class="cont-cards grid lg:grid-cols-3 gap-10">
                 <div class="card p-10 border-2 bg-primary-alternative rounded-2xl">
                     <p>Queremos que ningún
                         empleado de Soberana SAS
@@ -79,7 +79,7 @@
                     <div class="card flex flex-col">
                         <div class="h-48 bg-cover bg-no-repeat bg-center" style="background-image: url('img/programs/card_programs/pro1.png')"></div>
                         <div class="card-body p-10">
-                            <div class="header grid grid-cols-2 gap-10">
+                            <div class="header grid md:grid-cols-2 gap-10">
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

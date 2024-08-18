@@ -1,6 +1,6 @@
 
 <footer class="relative z-0 overflow-hidden">
-    <div class="cont-flotante">
+    <div class="cont-flotante" data-aos="fade-up">
         <div class="img-flot-2 absolute -right-32 top-0 min-[1131px]:top-10 hidden md:block">
             <img src="{{ asset('img/utils/flot2.svg') }}" alt="img_flotante_lucari">
         </div>
