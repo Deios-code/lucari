@@ -8,7 +8,7 @@
             <img src="{{ asset('img/utils/flot3.svg') }}" alt="img_flotante_lucari">
         </div>
     </div>
-    <div class="z-0 min-[1400px]:max-h-96 max-[1400px]:max-h-72 bg-white">
+    <div class="z-0 min-[1400px]:max-h-96 max-[1400px]:max-h-72 bg-white lg:-m-10">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#057E3F" fill-opacity="1" d="M0,224L120,213.3C240,203,480,181,720,192C960,203,1200,245,1320,266.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
     </div>
     <div class="bg-primary">

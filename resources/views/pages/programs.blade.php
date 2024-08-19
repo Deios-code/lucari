@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :infoContact="$data['infoContact']">
     <header class="relative header-programs">
         <div class="container">
             <img src="{{ asset('img/programs/bg/bg1.jpg') }}" alt="img_programs_lucari" class="w-full h-60 object-cover">

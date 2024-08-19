@@ -18,9 +18,11 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
+            @props(['infoContact'])
+            {{-- @dd($infoContact) --}}
             @if (!request()->routeIs('home'))
-                @include('layouts.bar-top')
-                @include('layouts.navigation')
+                @include('layouts.bar-top', $infoContact)
+                @include('layouts.navigation', $infoContact)
             @endif
             <main>
                 {{ $slot }}

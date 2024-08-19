@@ -1,11 +1,10 @@
-
 @if (!request()->routeIs('home'))
     <nav class="cont-navigation">
 @else
     <nav class="cont-navigation-main">
 @endif
     <div class="container flex justify-between items-center text-white py-3 px-2 text-center">
-        <x-app-logo />
+        <x-app-logo :logo="$infoContact['url_logo']"/>
         <div class="items-center hidden lg:flex">
             <a href="/" class="{{request()->routeIs('home') ? 'active' : ''}}">Inicio</a>
             <a href="/nosotros" class="{{request()->routeIs('nosotros') ? 'active' : ''}}">Nosotros</a>
