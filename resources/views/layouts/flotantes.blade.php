@@ -4,14 +4,14 @@
     <div id="speed-dial-menu-dropdown" class="relative flex flex-col justify-end mb-4 space-y-2 bg-primary  border-2 rounded-full shadow-sm" style="z-index: 1500">
         <ul class="text-sm text-white flex items-center flex-col py-2">
             <li>
-                <a href="#">
+                <a href="{{ $infoContact['facebook']  }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="currentColor">
                         <path d="M22.675,0H1.325C0.593,0,0,0.593,0,1.325v21.351C0,23.407,0.593,24,1.325,24h11.495v-9.294H9.691v-3.622h3.128 V8.414c0-3.1,1.893-4.788,4.658-4.788c1.325,0,2.464,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.794,0.715-1.794,1.762v2.311 h3.588l-0.468,3.622h-3.12V24h6.116C23.407,24,24,23.407,24,22.675V1.325C24,0.593,23.407,0,22.675,0z"/>
                     </svg>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ $infoContact['instagram']  }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="currentColor">
                         <path d="M12,2.2c3.2,0,3.6,0,4.8,0.1c1.2,0,2,0.2,2.5,0.4c0.6,0.2,1,0.5,1.5,1s0.8,0.9,1,1.5c0.2,0.5,0.4,1.3,0.4,2.5
                         c0.1,1.2,0.1,1.6,0.1,4.8s0,3.6-0.1,4.8c0,1.2-0.2,2-0.4,2.5c-0.2,0.6-0.5,1-1,1.5s-0.9,0.8-1.5,1c-0.5,0.2-1.3,0.4-2.5,0.4
@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ $infoContact['linkedin']  }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-3.5 h-3.5">
                         <path d="M22.23,0H1.77C0.79,0,0,0.77,0,1.72v20.56C0,23.23,0.79,24,1.77,24h20.46C23.21,24,24,23.23,24,22.28V1.72
                         C24,0.77,23.21,0,22.23,0z M7.12,20.45H3.56V9H7.12V20.45z M5.34,7.66c-1.14,0-2.07-0.92-2.07-2.06c0-1.14,0.93-2.06,2.07-2.06
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ $infoContact['url_whatsapp']  }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-3.5 h-3.5">>
                         <path d="M16.012,2.403c-7.5,0-13.609,6.11-13.609,13.609c0,2.392,0.625,4.738,1.807,6.813L2.41,29.596l6.876-1.794
                         c1.998,1.089,4.217,1.664,6.522,1.664c7.5,0,13.609-6.11,13.609-13.609C29.621,8.513,23.512,2.403,16.012,2.403z M16.012,26.77

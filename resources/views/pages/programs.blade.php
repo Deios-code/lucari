@@ -80,39 +80,33 @@
                         <div class="h-48 bg-cover bg-no-repeat bg-center" style="background-image: url('img/programs/card_programs/pro1.png')"></div>
                         <div class="card-body p-10">
                             <div class="header grid md:grid-cols-2 gap-10">
+                                @php
+                                    $header = $data['programOne']['header'];
+                                    $body = $data['programOne']['body']['requisitos'];
+                                @endphp
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                                            <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-                                        </svg>
-                                        <h4 class="border-b-4 ml-4">Techos de Amor</h4>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" /><path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" /></svg>
+                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
                                     </div>
-                                    <p>Este programa busca ayudarte a ti y a tu familia a tener una vivienda digna.
-                                        <span class="font-bold">Queremos mejorar la calidad de vida de las familias más vulnerables a través
-                                        de la adquisición, construcción o mejora de viviendas.</span></p>
+                                    <p>{!! $header['title']['description'] !!}</p>
                                 </div>
                                 <div class="como_puedo p-5" style="background-color: #F3F3F3;">
-                                    <h4 class="mb-10">Cómo puedes beneficiarte:</h4>
+                                    <h4 class="mb-10">{{ $header['other']['title'] }}</h4>
                                     <ol class="list-inside list-decimal">
-                                        <li>Subsidio para comprar tu vivienda propia.</li>
-                                        <li>Subsidio para renovar o construir tu vivienda si no cumple con las condiciones mínimas que dignifican al ser humano.</li>
+                                        @foreach ($header['other']['content'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ol>
                                 </div>
                             </div>
                             <hr class="m-5">
                             <div class="body p-5 pt-0">
-                                <h4 class="mb-8">Requisitos:</h4>
+                                <h4 class="mb-8">{{$body['title']}}</h4>
                                 <ul class="list-inside list-disc">
-                                    <li>No haber sido beneficiado por otro programa de la Fundación LUCARI.</li>
-                                    <li>Los ingresos familiares totales no deben superar los 2 salarios mínimos.</li>
-                                    <li>Estrato socioeconómico 1 y 2.</li>
-                                    <li>Completar la encuesta virtual de caracterización socioeconómica.</li>
-                                    <li>Si eres colaborador de Soberana SAS o el Roble SAS, debes tener una antigüedad verificable en la empresa de al menos 2 años</li>
-                                    <li>y un proyecto de vida que contemple a la compañía.</li>
-                                    <li>Tener claros los valores, tiempos y entidades (constructoras y bancarias) que harán realidad el proyecto.</li>
-                                    <li>Haber recibido la visita domiciliaria y entrevista por parte de nuestros profesionales.</li>
-                                    <li>Ser aprobado por el comité administrativo de la fundación.</li>
+                                    @foreach ($body['content'] as $item)
+                                        <li>{{ $item }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -122,6 +116,10 @@
                     <div class="card flex flex-col">
                         <div class="h-48 bg-cover bg-no-repeat bg-top" style="background-image: url('img/programs/card_programs/pro2.jpeg')"></div>
                         <div class="card-body p-10">
+                            @php
+                                $header = $data['programTwo']['header'];
+                                $body = $data['programTwo']['body'];
+                            @endphp
                             <div class="header grid grid-cols-2 gap-10">
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
@@ -129,45 +127,37 @@
                                             <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                                             <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">Programa Escalar</h4>
+                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
                                     </div>
-                                    <p><span class="font-bold">Este programa te ayuda a ti y a otros jóvenes de comunidades vulnerables a
-                                        transformar su vida a través de la educación.</span> Financiará carreras técnicas,
-                                        tecnológicas o universitarias, proporcionando becas y subsidios de sostenimiento. </p>
+                                    <p>{!! $header['title']['description'] !!}</p>
                                 </div>
                                 <div class="como_puedo p-5" style="background-color: #F3F3F3;">
-                                    <h4 class="mb-10">Cómo puedes beneficiarte:</h4>
+                                    <h4 class="mb-10">{{ $header['other']['title'] }}</h4>
                                     <ol class="list-inside list-decimal">
-                                        <li>Beca hasta del 80% para carreras técnicas,tecnológicas y universitarias.</li>
-                                        <li>Apoyo de sostenimiento durante tu formación.</li>
+                                        @foreach ($header['other']['content'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ol>
                                 </div>
                             </div>
                             <hr class="m-5">
                             <div class="body p-5 pt-0 grid grid-cols-2 gap-10">
                                 <div class="px-5" style="background-color: #F3F3F3;">
-                                    <h4 class="mb-8">Requisitos:</h4>
+                                    <h4 class="mb-8">{{$body['requisitos']['title']}}</h4>
                                     <ul class="list-inside list-disc">
-                                        <li>Tener entre 16 y 25 años y ser miembro de las comunidades donde actuamos (si eres colaborador de Soberana o El Roble, la edad es evaluable).</li>
-                                        <li>Los ingresos totales en el hogar no deben superar los 2 salarios mínimos.</li>
-                                        <li>Estrato socioeconómico 1 y 2.</li>
-                                        <li>Completar la encuesta virtual de caracterización socioeconómica.</li>
-                                        <li>Haber sido admitido en el programa académico de tu elección.</li>
-                                        <li>Tener claros los criterios necesarios para el ingreso a la institución educativa, costos y programa.</li>
-                                        <li>Haber sido preseleccionado y haber recibido la visita domiciliaria y entrevista por parte de nuestros profesionales.</li>
-                                        <li>Ser aprobado por el comité administrativo de la fundación.</li>
+                                        @foreach ($body['requisitos']['content'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="mb-8">Condiciones para mantener la beca:</h4>
+                                    <h4 class="mb-8">{{$body['others']['title']}}</h4>
                                     <ul class="list-inside list-disc">
-                                        <li>Mantener actualizados tus datos personales y documentos ante la Fundación LUCARI.</li>
-                                        <li>Matricular la cantidad total de créditos, guías o materias por periodo académico.</li>
-                                        <li>Mantener un promedio acumulado igual o superior a 3.8.</li>
-                                        <li>Realizar 10 horas de labor social mensual.</li>
-                                        <li>Participar activamente en el programa de orientación vocacional de la Fundación LUCARI.</li>
+                                        @foreach ($body['others']['content'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ul>
-                                    <div class="mt-4 mx-auto h-36 w-96 bg-cover bg-no-repeat bg-top rounded-2xl" style="background-image: url('img/programs/img2.png')"></div>
+                                    <div class="mt-4 mx-auto h-36 w-96 bg-cover bg-no-repeat bg-top rounded-2xl" style="background-image: url({{$body['others']['url_image']}})"></div>
                                 </div>
                             </div>
                         </div>
@@ -177,6 +167,10 @@
                     <div class="card flex flex-col">
                         <div class="h-48 bg-cover bg-no-repeat bg-center" style="background-image: url('img/programs/card_programs/pro3.jpg')"></div>
                         <div class="card-body p-10">
+                            @php
+                                $header = $data['programThree']['header'];
+                                $body = $data['programThree']['body'];
+                            @endphp
                             <div class="header">
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
@@ -185,46 +179,28 @@
                                             <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
                                             <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">Rumbo a La Escuela</h4>
+                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
                                     </div>
-                                    <p>EEste programa está dirigido a las escuelas rurales de escasos recursos, con el objetivo de lograr transformaciones significativas a nivel personal,
-                                        institucional y poblacional.
-                                        <span class="font-bold">Queremos ayudarte a ti y a tus compañeros a tener una mejor educación y calidad de vida.</span></p>
+                                    <p>{!! $header['title']['description'] !!}</p>
                                 </div>
                             </div>
                             <hr class="m-5">
                             <div class="body p-5 pt-0 grid grid-cols-3 gap-10">
                                 <div class="flex flex-col items-center justify-center" style="background-color: #F3F3F3;">
-                                    <h4 class="mb-8">Áreas de intervención:</h4>
+                                    <h4 class="mb-8">{{$body['area']['title']}}</h4>
                                     <ol class="list-inside list-decimal">
-                                        <li class="mb-4">Alimentación.</li>
-                                        <li class="mb-4">Mejoramiento de infraestructura.</li>
-                                        <li class="mb-4">Donaciones de insumos escolares.</li>
-                                        <li class="mb-4">Kits escolares y uniformes.</li>
-                                        <li class="mb-4">Mantenimiento de instalaciones.</li>
-                                        <li class="mb-4">Formaciones para estudiantes.</li>
-                                        <li class="mb-4">Programa de formación en artes.</li>
-                                        <li class="mb-4">Programa Ratón de Biblioteca.</li>
+                                        @foreach ($body['area']['content'] as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ol>
                                 </div>
                                 <div class="col-span-2">
-                                    <h4>Ratón de Biblioteca</h4>
-                                    <ul class="list-inside list-disc my-6">
-                                        <li>Queremos que a través de la lectura, tú y tus compañeros puedan soñar, aprender y conocer más. <span class="font-bold">La
-                                            lectura es una herramienta poderosa para mejorar la calidad de la educación y tu desarrollo personal.</span></li>
-                                    </ul>
-                                    <h4>Formación en Artes</h4>
-                                    <ul class="list-inside list-disc my-6">
-                                        <li>Diseñamos un plan de formación en habilidades artísticas para tu desarrollo integral. <span class="font-bold">Queremos crear
-                                            espacios de entretenimiento sano para que no veas en la deserción escolar una opción para tu vida.</span></li>
-                                    </ul>
-                                    <h4>Rumbo a la Escuela - Papás</h4>
-                                    <ul class="list-inside list-disc my-6">
-                                        <li>Este programa está dirigido a los padres de familia de las escuelas padrinadas.
-                                            <span class="font-bold">Queremos ayudarte a mejorar tu calidad de vida a través de la formación técnica y habilidades que te permitan desarrollarte en tu comunidad y aumentar tus oportunidades laborales.</span>
-                                            Trabajamos con el SENA para ofrecer programas de formación efectivos y relevantes.
-                                        </li>
-                                    </ul>
+                                    @foreach ($body['others']['content'] as $item)
+                                        <h4>{{ $item['title'] }}</h4>
+                                        <ul class="list-inside list-disc my-6">
+                                            <li>{!! $item['content'] !!}</li>
+                                        </ul>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -234,34 +210,32 @@
                     <div class="card flex flex-col">
                         <div class="h-48 bg-cover bg-no-repeat bg-center" style="background-image: url('img/programs/card_programs/pro1.png')"></div>
                         <div class="card-body p-10">
+                            @php
+                                $header = $data['programFour']['header'];
+                                $body = $data['programFour']['body'];
+                                $footer = $data['programFour']['footer'];
+                            @endphp
                             <div class="header">
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">Nutrimos Corazones</h4>
+                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
                                     </div>
-                                    <p>Este programa se enfoca en establecer alianzas con instituciones que mejoren la alimentación de las poblaciones
-                                        vulnerables.
-                                        <span class="font-bold">Queremos ayudarte a ti y a otras familias a tener acceso a alimentos nutritivos y suficientes.</span>
-                                    </p>
+                                    <p>{!! $header['title']['description'] !!}</p>
                                 </div>
                             </div>
                             <hr class="m-5">
                             <div class="body p-5 pt-0">
-                                <h4 class="mb-8">Cómo funciona:</h4>
+                                <h4 class="mb-8">{{$body['requisitos']['title']}}</h4>
                                 <ol class="list-inside list-decimal">
-                                    <li class="mb-4">Brindamos apoyos alimenticios en especie o donaciones en dinero.</li>
-                                    <li class="mb-4">Las entidades aliadas se encargan del componente logístico.</li>
-                                    <li class="mb-4">Las entidades aliadas nos proporcionan información periódica sobre las poblaciones impactadas y los recursos utilizados.</li>
-                                    <li class="mb-4">La continuidad de los apoyos depende del cumplimiento de los objetivos establecidos en los programas desarrollados por las entidades aliadas.</li>
-                                    <li class="mb-4">Realizamos alianzas para actividades de comedor escolar, comunitario y complementación de mercados.</li>
+                                    @foreach ($body['requisitos']['content'] as $item)
+                                        <li>{{ $item }}</li>
+                                    @endforeach
                                 </ol>
                                 <div class="text-center p-5 rounded-2xl" style="background-color: #F3F3F3">
-                                    <p class="font-bold text-primary">Las condiciones específicas relacionadas con las líneas de acción, la cantidad de alimentos suministrados por alianza y los
-                                        programas y entidades aliadas se establecerán una vez que se definan las entidades colaboradoras y se determinen los
-                                        montos disponibles, tanto en especie como en dinero, así como las poblaciones que serán beneficiadas.</p>
+                                    <p class="font-bold text-primary">{{$footer['content']}}</p>
                                 </div>
                             </div>
                         </div>

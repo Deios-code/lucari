@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\StoriesController;
 use Illuminate\Support\Facades\Route;
@@ -16,26 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/index');
-})->name('home');
-
-route::get('/nosotros', function () {
-    return view('pages/about');
-})->name('nosotros');
-
-// route::get('/nuestros-programas', function () {
-//     return view('pages/programs');
-// })->name('nuestros-programas');
-
-// route::get('/nuestras-historias', function () {
-//     return view('pages/stories');
-// })->name('nuestras-historias');
-
-// route::get('/nuestras-historias/titulo-en-slug', function () {
-//     return view('pages/stories/show');
-// })->name('nuestras-historias');
-
 route::get('/informes-gestion', function () {
     return view('pages/report');
 })->name('informes-gestion');
@@ -45,5 +26,7 @@ route::get('/contacto', function () {
 })->name('contacto');
 
 
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/nosotros', [AboutController::class, 'index'])->name('nosotros');
 Route::get('/nuestros-programas', [ProgramsController::class, 'index'])->name('nuestros-programas');
 Route::get('/nuestras-historias', [StoriesController::class, 'index'])->name('nuestras-historias');

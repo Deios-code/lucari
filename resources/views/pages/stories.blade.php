@@ -20,8 +20,7 @@
                 </div> --}}
                 @foreach ($data['stories'] as $key => $item)
                     <div class="card border rounded-2xl p-5 basis-5/12">
-                        {{-- <img src="{{ $item['url_image'] }}" class="rounded-2xl" alt="img_noticia_{{$key+1}}"> --}}
-                        <img src="{{ 'http://127.0.0.1:8000/img/lucari/news/'.$item['image'] }}" class="rounded-2xl" alt="img_noticia_{{$key+1}}">
+                        <img src="{{ $item['url_image'] }}" class="rounded-2xl" alt="img_noticia_{{$key+1}}">
                         <p class="font-bold border-b-4 my-4 tit-news"> {{$item['title']}} </p>
                         {!! $item['description'] !!}
                     </div>

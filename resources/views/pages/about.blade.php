@@ -1,8 +1,10 @@
-<x-app-layout>
+<x-app-layout :infoContact="$data['infoContact']">
+    @php
+        $about = $data['about'];
+    @endphp
     <header class="relative header-about">
         <img src="{{ asset('img/bg_about.jpeg') }}" alt="">
     </header>
-
     <section class="cont-about sobre-nosotros relative">
         <div class="img-flot-1 absolute top-6!important">
             <img src="{{ asset('img/utils/bar-primary.svg') }}" alt="">
@@ -14,12 +16,12 @@
                         <br>
                         <br>
                     </div>
-                    <img class="rounded-lg" src="{{ asset('img/about/img1.jpg') }}" alt="img_site_lucari">
-                    <img class="rounded-lg" src="{{ asset('img/about/img2.jpg') }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ $about['images'][0]['url_img'] }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ $about['images'][1]['url_img'] }}" alt="img_site_lucari">
                 </div>
                 <div class="grid gap-4">
-                    <img class="rounded-lg" src="{{ asset('img/about/img3.jpg') }}" alt="img_site_lucari">
-                    <img class="rounded-lg" src="{{ asset('img/about/img4.png') }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ $about['images'][2]['url_img'] }}" alt="img_site_lucari">
+                    <img class="rounded-lg" src="{{ $about['images'][3]['url_img'] }}" alt="img_site_lucari">
                     <br>
                 </div>
             </div>
@@ -32,7 +34,7 @@
                 </div>
                 <div class="px-10">
                     <h4 class="text-primary border-l-4">Transformando Vidas desde 2014</h4>
-                    <p>Desde que la <span class="font-bold">Familia Aristizábal Zuluaga fundó la Fundación LUCARI en 2014</span>, nos hemos dedicado a mejorar la calidad de vida de las comunidades más vulnerables, especialmente en aquellas donde la empresa Soberana SAS tiene  presencia. <span class="font-bold">Estamos aquí para ser un motor de cambio, ayudando a las familias a construir un futuro mejor y más prometedor.</span></p>
+                    {!! $about['history'] !!}
                 </div>
             </div>
         </div>
@@ -57,18 +59,19 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
                     </svg>
-                    <h4>Nuestra Misión</h4>
+                    <h4>{{ $about['tittle_mision'] }}</h4>
                 </div>
-                <p>Somos una organización sin ánimo de lucro con un propósito claro: <span class="font-bold">transformar la vida de las personas más necesitadas a través de programas enfocados en educación, alimentación y vivienda.</span> Trabajamos mano a mano con Soberana SAS y otras entidades para crear proyectos que realmente cambian vidas.</p>
+                {!! $about['description_mision'] !!}
             </div>
             <div class="p-10" style="background-color: #F3F4F6;">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
                     </svg>
-                    <h4>Nuestra Visión</h4>
+                    <h4>{{ $about['tittle_vision'] }}</h4>
                 </div>
-                <p>Queremos ser una fundación sólida, autosuficiente y reconocida por nuestra contribución al desarrollo social. <span class="font-bold">Nos enfocamos en mejorar las condiciones de vida de las comunidades más vulnerables</span>, colaborando con empresas privadas para desarrollar programas sostenibles que hagan una diferencia en nuestra sociedad.</p>
+                {!! $about['description_vision'] !!}
+
             </div>
         </div>
     </section>
@@ -81,18 +84,19 @@
                 <h5>Nuestros Valores</h5>
             </div>
             <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl">
-                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
-                    <h4>Solidaridad</h4>
-                    <p>Creemos en el bien común y en <span class="font-bold">ayudarnos unos a otros.</span></p>
-                </div>
-                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
-                    <h4>Compromiso</h4>
-                    <p>Estamos totalmente <span class="font-bold">dedicados a nuestra misión</span> y luchamos por alcanzar nuestros objetivos compartidos.</p>
-                </div>
-                <div class="card px-4">
-                    <h4>Calidad Humana</h4>
-                    <p><span class="font-bold">Nos esforzamos por dejar una huella positiva</span> en cada persona, en cada momento y en cada lugar.</p>
-                </div>
+                @foreach ($about['valores'] as $key => $item)
+                    @if ($key == 1)
+                        <div class="card px-4 max-[911px]:py-8 min-[911px]:border-r-4 min-[911px]:border-l-4">
+                            <h4>{{ $item['title'] }}</h4>
+                            {!! $item['description'] !!}
+                        </div>
+                    @else
+                        <div class="card px-4">
+                            <h4>{{ $item['title'] }}</h4>
+                            {!! $item['description'] !!}
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>

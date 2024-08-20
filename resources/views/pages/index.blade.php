@@ -2,8 +2,8 @@
     {{-- <header class="cont-header-main flex flex-col justify-between" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)), url('/img/banner-main.jpg') no-repeat center center/cover;"> --}}
     <header class="cont-header-main relative">
         <div class="absolute top-0 z-10 w-full">
-            @include('layouts.bar-top', ['route' => 'home'])
-            @include('layouts.navigation', ['route' => 'home'])
+            @include('layouts.bar-top', ['infoContact' => $data['infoContact'] ,'route' => 'home'])
+            @include('layouts.navigation', ['infoContact' => $data['infoContact'] ,'route' => 'home'])
         </div>
         @include('pages.main.slider')
     </header>
@@ -114,18 +114,19 @@
                 <h5>Nuestros Valores</h5>
             </div>
             <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl" data-aos="fade-up-right">
-                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
-                    <h4>Solidaridad</h4>
-                    <p>Creemos en el bien común y en <span class="font-bold">ayudarnos unos a otros.</span></p>
-                </div>
-                <div class="card px-4 max-[911px]:pb-8 min-[911px]:border-r-4">
-                    <h4>Compromiso</h4>
-                    <p>Estamos totalmente <span class="font-bold">dedicados a nuestra misión</span> y luchamos por alcanzar nuestros objetivos compartidos.</p>
-                </div>
-                <div class="card px-4">
-                    <h4>Calidad Humana</h4>
-                    <p><span class="font-bold">Nos esforzamos por dejar una huella positiva</span> en cada persona, en cada momento y en cada lugar.</p>
-                </div>
+                @foreach ($data['valores'] as $key => $item)
+                    @if ($key == 1)
+                        <div class="card px-4 max-[911px]:py-8 min-[911px]:border-r-4 min-[911px]:border-l-4">
+                            <h4>{{ $item['title'] }}</h4>
+                            {!! $item['description'] !!}
+                        </div>
+                    @else
+                        <div class="card px-4">
+                            <h4>{{ $item['title'] }}</h4>
+                            {!! $item['description'] !!}
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -144,7 +145,7 @@
                 <p>Nuestras acciones están alineadas con los ODS, especialmente en la lucha contra la pobreza (ODS 1) y el hambre (ODS 2). <span class="font-bold">Trabajamos para construir un país más justo y equitativo, donde todos tengan la oportunidad de prosperar.</span></p>
             </div>
             <div class="titulo-seccion">
-                <h4>Nuestros Valores</h4>
+                <h4>Nuestros Programas</h4>
             </div>
             <div class="cont-programas grid min-[768px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6" data-aos="fade-right">
                 <a href="/" class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img1.png') no-repeat;background-size: cover;">
@@ -167,7 +168,7 @@
                 </div>
                 <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img3.png') no-repeat;background-size: cover;">
                     <div class="txt-card">
-                        <h4>Techos de <span>Amor</span></h4>
+                        <h4>Rumbo a la <span>escuela</span></h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Educación y Alimentación, ODS 1 y 2</p>
                     </div>
                     <div class="hover-card flex items-center">
@@ -203,64 +204,22 @@
     </div>
     <section class="nuestras-noticias py-10">
         <div class="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-white card z-10 rounded-lg border-2" data-aos="fade-right">
-                <img src="{{ asset('img/news/img1.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
-                <div class="txt-card p-6">
-                    <h5 class="border-b-4 w-fi ">ALIANZAS</h5>
-                    <p class="my-4">Descubre más sobre nuestras alianzas en pro de los niños más necesitados de nuestro país</p>
-                    <div class="flex justify-end">
-                        <a href="" class="flex items-center hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                            </svg>
-                            Leer Más
-                        </a>
+            @foreach ($data['stories'] as $key => $item)
+                <div class="bg-white card z-0 rounded-lg border-2" data-aos="fade-right">
+                    <img src="{{ $item['url_image'] }}" alt="img_noticias_{{$key+1}}" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
+                    <div class="txt-card p-6">
+                        <h5 class="border-b-4 w-fi ">{{ $item['title'] }}</h5>
+                        <div class="flex justify-end my-4">
+                            <a href="/nuestras-historias" class="flex items-center hover:underline">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                                </svg>
+                                Leer Más
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-white card z-10 rounded-lg border-2" data-aos="fade-right">
-                <img src="{{ asset('img/news/img2.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
-                <div class="txt-card p-6">
-                    <h5 class="border-b-4 w-fit mb-4">ENTREGA DE LA CONSTRUCCIÓN DE 4 BIBLIOTECAS</h5>
-                    <div class="flex justify-end">
-                        <a href="" class="flex items-center hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                            </svg>
-                            Leer Más
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white card z-10 rounded-lg border-2" data-aos="fade-right">
-                <img src="{{ asset('img/news/img3.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
-                <div class="txt-card p-6 flex flex-col justify-between">
-                    <h5 class="border-b-4 w-fit mb-4">FUNDACIÓN LUCARI ENTREGÓ 2 NUEVOS SUBSIDIOS DE VIVIENDA</h5>
-                    <div class="flex justify-end">
-                        <a href="" class="flex items-center hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                            </svg>
-                            Leer Más
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white card z-10 rounded-lg border-2" data-aos="fade-right">
-                <img src="{{ asset('img/news/img4.png') }}" alt="img_noticias_1" class="rounded-t-lg max-[1400px]:min-h-80 min-[1400px]:max-h-60 object-cover w-full">
-                <div class="txt-card p-6">
-                    <h5 class="border-b-4 w-fit ">3 HOGARES QUE SE RENUEVAN EN CERETÉ</h5>
-                    <p class="my-4">3 Familias que ahora tienen mejor calidad de vida.</p>
-                    <div class="flex justify-end">
-                        <a href="" class="flex items-center hover:underline">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                            </svg>
-                            Leer Más
-                        </a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
     <section class="nuestros-aliados bg-white pt-10 pb-0 min-[1131px]:py-10">
@@ -268,11 +227,9 @@
             <h3 class="text-center border-b-4 w-fit my-0 mx-auto pb-2">Descubre las alianzas que potencian nuestro impacto.</h3>
             <div class="scroll-container">
                 <div class="scroll-content">
-                    <img src="{{ asset('img/allies/img1.png') }}" alt="">
-                    <img src="{{ asset('img/allies/img2.png') }}" alt="">
-                    <img src="{{ asset('img/allies/img3.png') }}" alt="">
-                    <img src="{{ asset('img/allies/img4.png') }}" alt="">
-                    <img src="{{ asset('img/allies/img5.png') }}" alt="">
+                    @foreach ($data['allies'] as $item)
+                        <img src="{{ $item['url_img'] }}" alt="{{$item['img']}}">
+                    @endforeach
                 </div>
             </div>
         </div>

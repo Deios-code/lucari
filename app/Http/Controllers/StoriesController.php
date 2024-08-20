@@ -10,8 +10,8 @@ class StoriesController extends Controller
 
     public function index(Request $request){
         try {
-            $data['infoContact'] = $this->getInfoContact();
-            $data['infoContact'] = json_decode($data['infoContact']['content'], true);
+            $infoContact = $this->getInfoContact();
+            $data['infoContact'] = json_decode($infoContact['content'], true);
 
             $response = Http::get($this->getUrlApi().$request->path());
 
@@ -27,7 +27,6 @@ class StoriesController extends Controller
             return view('pages/stories', compact('data', 'status'));
 
         } catch (\Throwable $th) {
-            dd($th);
             return view('pages/stories', ['data'=>[], 'status'=> 404]);
         }
     }
