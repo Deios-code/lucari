@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :infoContact="$data['infoContact']">
     <header class="site-stories relative">
         <div class="min-h-60 bg-contain md:bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: linear-gradient(rgba(5, 126, 63, 0.8),rgba(5, 126, 63, 0.8)),url('/img/bg-stories.jpg')">
                 {{-- <h3 class="text-center text-white">Contáctanos</h3> --}}
@@ -8,16 +8,19 @@
         <div class="container bg-white p-5 lg:p-10 rounded-lg">
             <div class="grid md:grid-cols-2 gap-4">
                 <div>
+                    @php
+                        $infoContact = $data['infoContact'];
+                    @endphp
                     <h4 class="mb-4">Información de contacto</h4>
-                    <p>Puedes escribirnos a través del formulario a continuación o enviarnos un correo directamente</p>
+                    <p>{{$infoContact['description']}}</p>
                     <div class="cont-icon flex items-center mt-8">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                         </svg>
                         <div class="flex justify-center flex-col">
-                            <p class="font-bold">Visitanos</p>
-                            <p>Cra. 57 No. 74 – 80 Itagüí Antioquia, Colombia</p>
+                            <p class="font-bold">{{$infoContact['tit_address']}}</p>
+                            <p>{{$infoContact['address']}}</p>
                         </div>
                     </div>
                     <div class="cont-icon flex items-center mt-8">
@@ -25,8 +28,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                         </svg>
                         <div class="flex justify-center flex-col">
-                            <p class="font-bold">Comunicate con nosotros</p>
-                            <p>+57 (4) 444 3918 Ext 1403</p>
+                            <p class="font-bold">{{$infoContact['tit_phone']}}</p>
+                            <p>{{$infoContact['fullPhone']}}</p>
                         </div>
                     </div>
                     <div class="cont-icon flex items-center mt-8">
@@ -34,18 +37,18 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                         </svg>
                         <div class="flex justify-center flex-col">
-                            <p class="font-bold">Escribenos</p>
-                            <p>Comunicaciones@fundacionlucari.org</p>
+                            <p class="font-bold">{{$infoContact['tit_email']}}</p>
+                            <p>{{$infoContact['email']}}</p>
                         </div>
                     </div>
                     <p class="font-bold mt-10 mb-4">Nuestras Redes Sociales</p>
                     <div class="cont-redes flex">
-                        <a href="#">
+                        <a href="{{ $infoContact['facebook']  }}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M22.675,0H1.325C0.593,0,0,0.593,0,1.325v21.351C0,23.407,0.593,24,1.325,24h11.495v-9.294H9.691v-3.622h3.128 V8.414c0-3.1,1.893-4.788,4.658-4.788c1.325,0,2.464,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.794,0.715-1.794,1.762v2.311 h3.588l-0.468,3.622h-3.12V24h6.116C23.407,24,24,23.407,24,22.675V1.325C24,0.593,23.407,0,22.675,0z"/>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="{{ $infoContact['instagram']  }}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12,2.2c3.2,0,3.6,0,4.8,0.1c1.2,0,2,0.2,2.5,0.4c0.6,0.2,1,0.5,1.5,1s0.8,0.9,1,1.5c0.2,0.5,0.4,1.3,0.4,2.5
                                 c0.1,1.2,0.1,1.6,0.1,4.8s0,3.6-0.1,4.8c0,1.2-0.2,2-0.4,2.5c-0.2,0.6-0.5,1-1,1.5s-0.9,0.8-1.5,1c-0.5,0.2-1.3,0.4-2.5,0.4
@@ -60,7 +63,7 @@
                                 L18.4,4.3z M12,7.3c2.6,0,4.7,2.1,4.7,4.7S14.6,16.7,12,16.7s-4.7-2.1-4.7-4.7S9.4,7.3,12,7.3L12,7.3z"/>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="{{ $infoContact['linkedin']  }}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <path d="M22.23,0H1.77C0.79,0,0,0.77,0,1.72v20.56C0,23.23,0.79,24,1.77,24h20.46C23.21,24,24,23.23,24,22.28V1.72
                                 C24,0.77,23.21,0,22.23,0z M7.12,20.45H3.56V9H7.12V20.45z M5.34,7.66c-1.14,0-2.07-0.92-2.07-2.06c0-1.14,0.93-2.06,2.07-2.06
@@ -68,7 +71,7 @@
                                 c-1.88,0-2.17,1.47-2.17,2.99v5.75h-3.56V9h3.42v1.56h0.05c0.48-0.91,1.66-1.88,3.42-1.88c3.65,0,4.33,2.4,4.33,5.51v6.26H20.45z"/>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="{{ $infoContact['url_whatsapp']  }}" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">>
                                 <path d="M16.012,2.403c-7.5,0-13.609,6.11-13.609,13.609c0,2.392,0.625,4.738,1.807,6.813L2.41,29.596l6.876-1.794
                                 c1.998,1.089,4.217,1.664,6.522,1.664c7.5,0,13.609-6.11,13.609-13.609C29.621,8.513,23.512,2.403,16.012,2.403z M16.012,26.77
@@ -88,7 +91,8 @@
                 </div>
                 <div class="border-t-2 md:border-t-0 md:border-l-2 p-5 md:p-10 md:py-0">
                     <h4 class="mb-4">Contáctanos</h4>
-                    <form action="" method="post" class="">
+                    <form action="/sendMail" method="POST">
+                        @csrf
                         <small>Los campos con * son obligatorios</small>
                         <div class="my-5">
                             <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">*Nombre</label>
@@ -113,8 +117,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- 'lat' => 6.18948809194407, 'long' => -75.60169958088075 --}}
     </section>
     <section class="bg-white pt-20">
         <div id="map" class="container" style="height: 300px"></div>

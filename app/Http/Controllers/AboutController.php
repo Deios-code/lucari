@@ -8,22 +8,20 @@ use Illuminate\Support\Facades\Http;
 class AboutController extends Controller
 {
     public function index(Request $request){
-        try {
-            $infoContact = $this->getInfoContact();
-            // dd($infoContact);
-            $data['infoContact'] = json_decode($infoContact['content'], true);
+        $infoContact = $this->getInfoContact();
+        $data['infoContact'] = json_decode($infoContact['content'], true);
 
-            $response = Http::get($this->getUrlApi().$request->path());
+        $response = Http::get($this->getUrlApi().$request->path());
 
-            if($response->successful()){
-                $records = $response->json();
-                $data['about'] = json_decode($records['content'], true);
-            }
-            $status = $response->status();
-            return view('pages/about', compact('data', 'status'));
-
-        } catch (\Throwable $th) {
-            return view('pages/about', ['data'=>[], 'status'=> 404]);
+        if($response->successful()){
+            $records = $response->json();
+            $data['about'] = json_decode($records['content'], true);
+        }else{
+            $error['message'] = $response->body();
+            $error = json_decode($error['message'], true);
+            $data['error'] = $error['error'];
         }
+        $status = $response->status();
+        return view('pages/about', compact('data', 'status'));
     }
 }

@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StoriesController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,16 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-route::get('/informes-gestion', function () {
-    return view('pages/report');
-})->name('informes-gestion');
-
-route::get('/contacto', function () {
-    return view('pages/contact');
-})->name('contacto');
-
-
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/nosotros', [AboutController::class, 'index'])->name('nosotros');
 Route::get('/nuestros-programas', [ProgramsController::class, 'index'])->name('nuestros-programas');
 Route::get('/nuestras-historias', [StoriesController::class, 'index'])->name('nuestras-historias');
+Route::get('/informes-gestion', [ReportController::class, 'index'])->name('informes-gestion');
+Route::get('/contacto', [ContactController::class, 'index'])->name('contacto');

@@ -43,29 +43,35 @@
             <div class="titulo-seccion">
                 <h4>Nuestros Valores</h4>
             </div>
+            @php
+                $titleOne = $data['programOne']['header']['title']['title'];
+                $titleTwo = $data['programTwo']['header']['title']['title'];
+                $titleThree = $data['programThree']['header']['title']['title'];
+                $titleFour = $data['programFour']['header']['title']['title'];
+            @endphp
 
             <div class="site-programs cont-programas grid min-[768px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
                 <button id="one-tab" data-tabs-target="#one" type="button" role="tab" aria-controls="one" aria-selected="true" class="btnProgram card relative bg-no-repeat bg-cover" data-bg="../img/programs/img1.png" style="">
                     <div class="txt-card">
-                        <h4>Techos de <span>Amor</span></h4>
+                        <h4>{!!$titleOne!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Vivienda, ODS 1</p>
                     </div>
                 </button>
                 <button id="two-tab" data-tabs-target="#two" type="button" role="tab" aria-controls="two" aria-selected="false" class="btnProgram card relative bg-no-repeat bg-cover" data-bg="../img/programs/img2.png" style="">
                     <div class="txt-card">
-                        <h4>Programa <span>Escalar</span></h4>
+                        <h4>{!!$titleTwo!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Educación, ODS 1</p>
                     </div>
                 </button>
                 <button id="three-tab" data-tabs-target="#three" type="button" role="tab" aria-controls="three" aria-selected="false" class="btnProgram card relative bg-no-repeat bg-cover" data-bg="../img/programs/img3.png" style="">
                     <div class="txt-card">
-                        <h4>Techos de <span>Amor</span></h4>
+                        <h4>{!!$titleThree!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Educación y Alimentación, ODS 1 y 2</p>
                     </div>
                 </button>
                 <button id="four-tab" data-tabs-target="#four" type="button" role="tab" aria-controls="four" aria-selected="false" class="btnProgram card relative bg-no-repeat bg-cover" data-bg="../img/programs/img4.png" style="">
                     <div class="txt-card">
-                        <h4>Nutrimos <span>Corazones</span></h4>
+                        <h4>{!!$titleFour!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Alimentación, ODS 2</p>
                     </div>
                 </button>
@@ -87,7 +93,7 @@
                                 <div class="titulo p-5">
                                     <div class="flex items-center mb-10">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" /><path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" /></svg>
-                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
+                                        <h4 class="border-b-4 ml-4">{!! $header['title']['title'] !!}</h4>
                                     </div>
                                     <p>{!! $header['title']['description'] !!}</p>
                                 </div>
@@ -101,14 +107,6 @@
                                 </div>
                             </div>
                             <hr class="m-5">
-                            <div class="body p-5 pt-0">
-                                <h4 class="mb-8">{{$body['title']}}</h4>
-                                <ul class="list-inside list-disc">
-                                    @foreach ($body['content'] as $item)
-                                        <li>{{ $item }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,7 +125,7 @@
                                             <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
                                             <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
+                                        <h4 class="border-b-4 ml-4">{!! $header['title']['title'] !!}</h4>
                                     </div>
                                     <p>{!! $header['title']['description'] !!}</p>
                                 </div>
@@ -141,25 +139,6 @@
                                 </div>
                             </div>
                             <hr class="m-5">
-                            <div class="body p-5 pt-0 grid grid-cols-2 gap-10">
-                                <div class="px-5" style="background-color: #F3F3F3;">
-                                    <h4 class="mb-8">{{$body['requisitos']['title']}}</h4>
-                                    <ul class="list-inside list-disc">
-                                        @foreach ($body['requisitos']['content'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="mb-8">{{$body['others']['title']}}</h4>
-                                    <ul class="list-inside list-disc">
-                                        @foreach ($body['others']['content'] as $item)
-                                            <li>{{ $item }}</li>
-                                        @endforeach
-                                    </ul>
-                                    <div class="mt-4 mx-auto h-36 w-96 bg-cover bg-no-repeat bg-top rounded-2xl" style="background-image: url({{$body['others']['url_image']}})"></div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,7 +158,7 @@
                                             <path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
                                             <path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
+                                        <h4 class="border-b-4 ml-4">{!! $header['title']['title'] !!}</h4>
                                     </div>
                                     <p>{!! $header['title']['description'] !!}</p>
                                 </div>
@@ -221,7 +200,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
                                         </svg>
-                                        <h4 class="border-b-4 ml-4">{{ $header['title']['title'] }}</h4>
+                                        <h4 class="border-b-4 ml-4">{!! $header['title']['title'] !!}</h4>
                                     </div>
                                     <p>{!! $header['title']['description'] !!}</p>
                                 </div>

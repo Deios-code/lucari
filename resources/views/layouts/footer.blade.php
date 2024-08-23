@@ -1,4 +1,3 @@
-{{-- @dd($data) --}}
 <footer class="relative z-0 overflow-hidden">
     <div class="cont-flotante" data-aos="fade-up">
         <div class="img-flot-2 absolute -right-32 top-0 min-[1131px]:top-10 hidden md:block">
@@ -55,8 +54,7 @@
 </footer>
 <section class="developer" id="developer">
     <div class="bg-dark p-4 text-center text-white">
-        {{-- <p>© 2024 Diseñado y desarrollado exclusivamente para Fundación Luis Carlos Aristizábal. <span class="font-bold">By NombreEmpresa</span></p> --}}
-        <p>© 2024 Desarrollado exclusivamente para Fundación Luis Carlos Aristizábal. <span class="font-bold">By Juan Echenique</span></p>
+        <p>{{$data['infoContact']['txt_developed']}}<span class="font-bold"><a href="{{$data['infoContact']['url_developed']}}" target="_blank">By {{$data['infoContact']['developed']}}</a></span></p>
     </div>
 </section>
 

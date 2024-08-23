@@ -12,7 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, ValidatesRequests;
 
     public function getUrlApi(){
-        return 'http://127.0.0.1:8000/api/pages/lucari/';
+        return 'https://patopixel.com/api/pages/lucari/';
     }
 
     public function getInfoContact(){

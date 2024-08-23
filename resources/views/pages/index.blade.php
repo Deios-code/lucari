@@ -147,10 +147,16 @@
             <div class="titulo-seccion">
                 <h4>Nuestros Programas</h4>
             </div>
+            @php
+                $titleOne = $data['programOne']['header']['title']['title'];
+                $titleTwo = $data['programTwo']['header']['title']['title'];
+                $titleThree = $data['programThree']['header']['title']['title'];
+                $titleFour = $data['programFour']['header']['title']['title'];
+            @endphp
             <div class="cont-programas grid min-[768px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6" data-aos="fade-right">
                 <a href="/" class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img1.png') no-repeat;background-size: cover;">
                     <div class="txt-card">
-                        <h4>Techos de <span>Amor</span></h4>
+                        <h4>{!!$titleFour!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Vivienda, ODS 1</p>
                     </div>
                     <div class="hover-card flex items-center">
@@ -159,7 +165,7 @@
                 </a>
                 <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img2.png') no-repeat;background-size: cover;">
                     <div class="txt-card">
-                        <h4>Programa <span>Escalar</span></h4>
+                        <h4>{!!$titleTwo!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Educación, ODS 1</p>
                     </div>
                     <div class="hover-card flex items-center">
@@ -168,7 +174,7 @@
                 </div>
                 <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img3.png') no-repeat;background-size: cover;">
                     <div class="txt-card">
-                        <h4>Rumbo a la <span>escuela</span></h4>
+                        <h4>{!!$titleThree!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Educación y Alimentación, ODS 1 y 2</p>
                     </div>
                     <div class="hover-card flex items-center">
@@ -177,7 +183,7 @@
                 </div>
                 <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img4.png') no-repeat;background-size: cover;">
                     <div class="txt-card">
-                        <h4>Nutrimos <span>Corazones</span></h4>
+                        <h4>{!!$titleOne!!}</h4>
                         <p><span class="font-bold">Línea Estratégica:</span> Alimentación, ODS 2</p>
                     </div>
                     <div class="hover-card flex items-center">
