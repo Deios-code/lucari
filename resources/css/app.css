@@ -268,11 +268,11 @@ p{
 .cont-numeros{
     position: relative;
     margin-top: -30px;
-    z-index: 100!important;
 }
 @media (min-width: 1131px) {
     .cont-numeros{
         margin-top: -50px;
+        z-index: 100!important;
     }
 }
 .cards-valores{
@@ -650,8 +650,9 @@ p{
         max-height: 125px;
     }
     .nuestros-aliados .scroll-content {
-        display: inline-block;
-        white-space: nowrap;
+        grid-template-columns: repeat(5, 1fr);
+        /* display: inline-block; */
+        /* white-space: nowrap; */
         margin-top: 40px;
     }
     .nuestros-aliados .scroll-content img{

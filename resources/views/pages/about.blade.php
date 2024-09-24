@@ -39,9 +39,9 @@
             </div>
         </div>
     </section>
-    <section class="nuestro-impacto sm:py-10 bg-white">
+    <section class="nuestro-impacto py-5 sm:py-10 bg-white">
         <div class="container sm:px-5 md:px-10" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/cont-1.jpg') no-repeat;background-size: cover;background-position: center;background-attachment: fixed;">
-            <div class=" flex  max-[537px]:flex-col max-[537px]:text-center items-center justify-between txt-seccion">
+            <div class="flex max-[537px]:flex-col max-[537px]:text-center items-center justify-between txt-seccion">
                 <p><span class="text-alternative font-bold">Haz parte del cambio.</span> Tu donación es la llave que abre puertas a un futuro más brillante para quienes más lo necesitan.</p>
                 {{-- <a href="" class="btn btn-primary-dark flex items-center max-[537px]:mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="">
@@ -83,7 +83,7 @@
             <div class="titulo-seccion z-50">
                 <h5>Nuestros Valores</h5>
             </div>
-            <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl">
+            <div class="cont-valores grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1131px]:items-center border-4 rounded-2xl" data-aos="fade-up-right">
                 @foreach ($about['valores'] as $key => $item)
                     @if ($key == 1)
                         <div class="card px-4 max-[911px]:py-8 min-[911px]:border-r-4 min-[911px]:border-l-4">

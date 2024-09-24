@@ -25,3 +25,4 @@ Route::get('/nuestros-programas', [ProgramsController::class, 'index'])->name('n
 Route::get('/nuestras-historias', [StoriesController::class, 'index'])->name('nuestras-historias');
 Route::get('/informes-gestion', [ReportController::class, 'index'])->name('informes-gestion');
 Route::get('/contacto', [ContactController::class, 'index'])->name('contacto');
+Route::post('/contacto', [ContactController::class, 'store'])->name('store');

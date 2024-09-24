@@ -23,7 +23,7 @@
     </div>
 </nav>
 
-<div id="drawer-navigation" class="bg-primary-transparent fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full" tabindex="-1" aria-labelledby="drawer-navigation-label">
+<div id="drawer-navigation" class="bg-primary-transparent fixed top-0 left-0 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full" tabindex="-1" aria-labelledby="drawer-navigation-label" style="z-index: 1000!important;">
     <div class="p-2">
         <h5 id="drawer-navigation-label" class=" font-semibold text-alternative uppercase ms-3">Menu</h5>
         <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-alternative bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center" >
@@ -31,7 +31,7 @@
             <span class="sr-only">Close menu</span>
         </button>
     </div>
-    <div class="py-4 overflow-y-auto">
+    <div class="py-4 overflow-y-auto" style="z-index: 1000">
         {{-- <img src="assets/img/logo.png" alt="" width="150px" class="mb-4"> --}}
         <ul class="space-y-2 font-medium">
             <li>

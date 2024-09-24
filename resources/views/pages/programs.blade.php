@@ -50,7 +50,7 @@
                 $titleFour = $data['programFour']['header']['title']['title'];
             @endphp
 
-            <div class="site-programs cont-programas grid min-[768px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+            <div class="site-programs cont-programas grid min-[500px]:grid-cols-2 min-[1131px]:grid-cols-4 sm:gap-4 md:gap-6" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
                 <button id="one-tab" data-tabs-target="#one" type="button" role="tab" aria-controls="one" aria-selected="true" class="btnProgram card relative bg-no-repeat bg-cover" data-bg="../img/programs/img1.png" style="">
                     <div class="txt-card">
                         <h4>{!!$titleOne!!}</h4>

@@ -113,7 +113,7 @@
             <div class="titulo-seccion" data-aos="fade-up-right">
                 <h5>Nuestros Valores</h5>
             </div>
-            <div class="cont-valores min-[911px]:flex min-[1131px]:items-center border-4 rounded-2xl" data-aos="fade-up-right">
+            <div class="cont-valores grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-[1131px]:items-center border-4 rounded-2xl" data-aos="fade-up-right">
                 @foreach ($data['valores'] as $key => $item)
                     @if ($key == 1)
                         <div class="card px-4 max-[911px]:py-8 min-[911px]:border-r-4 min-[911px]:border-l-4">
