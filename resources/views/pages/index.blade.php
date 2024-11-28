@@ -142,7 +142,7 @@
         <div class="py-4 min-[1131px]:py-20 container text-center">
             <div class="txt-titulo-programas" data-aos="fade-up">
                 <h3>Alineados con los Objetivos de Desarrollo Sostenible (ODS)</h3>
-                <p>Nuestras acciones están alineadas con los ODS, especialmente en la lucha contra la pobreza (ODS 1) y el hambre (ODS 2). <span class="font-bold">Trabajamos para construir un país más justo y equitativo, donde todos tengan la oportunidad de prosperar.</span></p>
+                <p>Nuestras acciones están alineadas con los ODS, especialmente en la lucha contra la pobreza (ODS 1) y el hambre (ODS 2). Trabajamos para construir un país más justo y equitativo, donde todos tengan la oportunidad de prosperar.</p>
             </div>
             <div class="titulo-seccion">
                 <h4>Nuestros Programas</h4>
@@ -169,7 +169,7 @@
                         <p><span class="font-bold">Línea Estratégica:</span> Educación, ODS 1</p>
                     </div>
                     <div class="hover-card flex items-center">
-                        <p>Brindamos becas y subsidios para que jóvenes de comunidades vulnerables <span class="font-bold">puedan acceder a educación superior</span>, rompiendo el ciclo de la pobreza y transformando sus vidas.</p>
+                        <p>Brindamos becas y auxilio de apoyo económico para que jóvenes de comunidades vulnerables <span class="font-bold">puedan acceder a educación superior</span>, rompiendo el ciclo de la pobreza y transformando sus vidas.</p>
                     </div>
                 </div>
                 <div class="card relative" style="background: linear-gradient(rgba(5, 126, 63, 0.87),rgba(5, 126, 63, 0.87)), url('../img/programs/img3.png') no-repeat;background-size: cover;">
